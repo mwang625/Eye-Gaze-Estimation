@@ -1,0 +1,21 @@
+#yum -y groupinstall "Development tools"
+#yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-#devel libpcap-devel xz-devel
+# install python 3.6.9
+wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tar.xz
+mkdir ~/local/
+mkdir ~/local/python3
+
+
+tar -xvJf  Python-3.6.9.tar.xz
+cd Python-3.6.9
+./configure --prefix=/cluster/home/fug/local/python3
+make && make install
+
+export PATH=/cluster/home/fug/local/python3/bin:$PATH >> ~/.bashrc
+source .bashrc
+
+# install pip
+easy_install-3.6 pip
+
+# https://blog.csdn.net/a2099948768/article/details/81531774
+#https://blog.csdn.net/hwj_wayne/article/details/78594346

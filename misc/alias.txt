@@ -1,0 +1,14 @@
+# set alias for git
+alias gb="git branch "
+alias gcm="git commit -m "
+alias ga="git add "
+alias gck="git checkout "
+alias gs="git status "
+
+# set alias for connecting cluster
+alias cnc="ssh fug@login.leonhard.ethz.ch "
+# upload files
+cpu(){scp "$1" fug@login.leonhard.ethz.ch:~/"$2";}
+# download files
+cpd(){scp fug@login.leonhard.ethz.ch:~/"$1" "$2";}
+

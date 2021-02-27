@@ -1,0 +1,7 @@
+#python = 3.6.9
+coloredlogs
+tensorflow
+tensorflow-gpu
+opencv-python # cv2
+# conda install --channel https://conda.anaconda.org/menpo opencv
+ujson
